@@ -3,11 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-const App = () => {
-  const now = new Date()
-  const a = 10
-  const b = 20
-  console.log(now, a+b)
+const Hello = () => {
   return (
     <div>
       <p>Hello world</p>
@@ -15,6 +11,17 @@ const App = () => {
   )
 }
 
+const App = () => {
+  return (
+    <div>
+      <h1>Greetings</h1>
+      
+      <Hello />
+      <Hello />
+      <Hello />
+    </div>
+  )
+}
 export default App
 
 // function App() {
