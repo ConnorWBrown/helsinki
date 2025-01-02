@@ -3,14 +3,14 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-const Hello = (props) => {
+const Hello = (parts) => {
 
-  console.log(props)
+  console.log(parts)
   return (
     <div>
       <p>
 
-        Hello {props.name}, you are {props.age} years old
+        Hello {parts.name}, you are {parts.age} years old
       </p>
     </div>
   )
