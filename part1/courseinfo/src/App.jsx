@@ -13,14 +13,14 @@ const Header = (props) => {
 }
 
 const Part = (props) => {
-console.log(props)
-return (
-  <div>
-    <p>
-      {props.part} {props.exercises}
-    </p>
-  </div>
-)
+  console.log(props)
+  return (
+    <div>
+      <p>
+        {props.part} {props.exercises}
+      </p>
+    </div>
+  )
 }
 
 const Content = (props) => {
