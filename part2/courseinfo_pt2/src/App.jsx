@@ -20,16 +20,6 @@ const Part = ({ part }) =>
     {part.name} {part.exercises}
   </p>
 
-// const Content = ({ props }) => {
-//   const { parts } = props
-//   return (
-//     {parts.map(item =>
-//       console.log(item)
-//         <Part part={item} />
-//     )}
-//   )
-// }
-
 const Content = ({ parts }) => {
   return (
     <>
@@ -39,26 +29,6 @@ const Content = ({ parts }) => {
     </>
   )
 }
-
-  // <>
-  //   {/* {parts => <Part key={part.name} part={part}></Part>} */}
-  //   {
-  //   parts.map(part =>
-  //     <Part key={part.name}>
-  //       {part}
-  //     </Part>
-  //   )
-  //   }
-  //   <Part
-  //     part={parts[0]} 
-  //   />
-  //   <Part
-  //     part={parts[1]} 
-  //   />
-  //   <Part
-  //     part={parts[2]} 
-  //   />      
-  // </>
 
 const App = () => {
   const course = {
