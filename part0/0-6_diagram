@@ -1,0 +1,13 @@
+sequenceDiagram
+    participant browser
+    participant server
+
+    browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+    activate server
+    server-->>browser: 201 Created
+    deactivate server
+    Note Browser only sends the note, does not get redirected or receive anything from the server
+
+    Note: page does not refresh because we prevented default action in the js
+
+    The browser adds the new note to the server by sending the post, but on the browser end it updates the local list of notes and does not query the server again.
