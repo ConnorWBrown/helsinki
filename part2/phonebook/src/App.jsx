@@ -1,8 +1,10 @@
 import { useState } from 'react'
+import Person from './components/Person.jsx'
 
 const App = () => {
   const [persons, setPersons] = useState([
-    { name: 'Arto Hellas' }
+    { name: 'Arto Hellas' },
+    { name: 'smbdy' }
   ]) 
   const [newName, setNewName] = useState('')
 
@@ -19,6 +21,12 @@ const App = () => {
       </form>
       <h2>Numbers</h2>
       <div>debug: {newName}</div>
+      <ul>
+        {persons.map(person => 
+          <Person key={person.name} name={person.name} />
+        )}
+      </ul>
+
       </div>
   )
 }
