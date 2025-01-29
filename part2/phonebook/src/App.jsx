@@ -3,10 +3,29 @@ import Person from './components/Person.jsx'
 
 const App = () => {
   const [persons, setPersons] = useState([
-    { name: 'Arto Hellas' },
-    { name: 'smbdy' }
+    { name: 'Arto Hellas', number: '5308675309' },
+    { name: 'smbdy', number: '5038675309' }
   ]) 
   const [newName, setNewName] = useState('')
+  const [newNumber, setNewNumber] = useState('')
+
+  const addPerson = (event) => {
+    event.preventDefault()
+    const personObject = {
+      name: newNote,
+      number: newNumber
+    }
+  
+    setNotes(notes.concat(personObject))
+    setNewName('')
+  }
+
+  const handleNameChange = (event) => {
+    setNewName(event.target.value)
+  }
+  const handleNumberChange = (event) => {
+    setNewNumber(event.target.value)
+  }
 
   return (
     <div>
@@ -16,6 +35,9 @@ const App = () => {
           name: <input />
         </div>
         <div>
+          number: <input />
+        </div>
+        <div>
           <button type="submit">add</button>
         </div>
       </form>
@@ -23,7 +45,7 @@ const App = () => {
       <div>debug: {newName}</div>
       <ul>
         {persons.map(person => 
-          <Person key={person.name} name={person.name} />
+          <Person key={person.name} name={person.name} number={person.number} />
         )}
       </ul>
 

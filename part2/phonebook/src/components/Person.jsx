@@ -1,9 +1,9 @@
-const Person = ({ name }) => {
+const Person = ({ name, number }) => {
     console.log(name)
     return (
        <>
         {console.log(name)}
-        <div>{name}</div>
+        <div>{name} {number}</div>
        </>
     )
   }
