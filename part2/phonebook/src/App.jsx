@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import Person from './components/Person.jsx'
+import Persons from './components/Persons.jsx'
+import InputField from './components/Form.jsx'
 
 const App = () => {
   const [persons, setPersons] = useState([
@@ -27,43 +28,37 @@ const App = () => {
 
   const handleNameChange = (event) => {
     setNewName(event.target.value)
-    console.log(event.target.value)
+    // console.log(event.target.value)
   }
   const handleNumberChange = (event) => {
     setNewNumber(event.target.value)
-    console.log(event.target.value)
+    // console.log(event.target.value)
   }
 
   return (
     <div>
       <h2>Phonebook</h2>
+      {/* <Form handleSubmit={addPerson} fields={[
+        [ 'namefld', {newName}, {handleNameChange} ],
+        [ 'numberfld', {newNumber}, {handleNumberChange} ]
+      ]} /> */}
+
+{/* <Form handleSubmit={addPerson} fields={[
+        { title: 'namefld', value: newName, handleValueChange: {handleNameChange} },
+        { title: 'numberfld', value: newNumber, handleValueChange: {handleNumberChange} }
+      ]} /> */}
+
       <form>
-        <div>
-          name:       
-        <input
-          value={newName}
-          onChange={handleNameChange}
-        />
+        {/* {console.log(persons)} */}
+        <InputField title='name' value={newName} handleValueChange={handleNameChange} />
+        <InputField title='number' value={newNumber} handleValueChange={handleNumberChange} />
 
-        </div>
-        <div>
-          number:
-          <input
-          value={newNumber}
-          onChange={handleNumberChange}
-        />
-
-        </div>
         <div>
           <button type="submit" onClick={addPerson}>add</button>
         </div>
       </form>
       <h2>Numbers</h2>
-      {/* <div>debug: {newName}</div> */}
-      {persons.map(person => 
-        <Person key={person.name} name={person.name} number={person.number} />
-      )}
-
+      <Persons persons={persons} ></Persons>
       </div>
   )
 }

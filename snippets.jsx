@@ -4,11 +4,24 @@
 
 
 // Map
-    <ul>
-    {notesToShow.map(note => 
-      <Note key={note.id} note={note} />
-    )}
-  </ul>
+return (
+    <div>
+      <ul>
+        {persons.map(note => 
+          <li key={note.id}>
+            {note.number}
+          </li>
+        )}
+      </ul>
+    </div>
+  )
+
+//OR Map outside of html
+return (
+    persons.map(person => 
+        <Person key={person.name} name={person.name} number={person.number} />
+    )
+)
 
 
 // Check if a value within an array is equal - "tests whether at least one element in the array passes the test implemented by the provided function"

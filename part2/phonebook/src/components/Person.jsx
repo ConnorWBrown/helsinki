@@ -1,8 +1,8 @@
 const Person = ({ name, number }) => {
-    // console.log(name)
+    // console.log({name})
     return (
        <>
-        {/* {console.log(name)} */}
+        {/* {console.log(name)}, */}
         <div>{name} {number}</div>
        </>
     )
