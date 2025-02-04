@@ -22,7 +22,7 @@ const App = () => {
     } else {
       setPersons(persons.concat(personObject))
       setNewName('')
-      setNewNumber('')  
+      setNewNumber('')
     }
   }
 
@@ -43,7 +43,7 @@ const App = () => {
         [ 'numberfld', {newNumber}, {handleNumberChange} ]
       ]} /> */}
 
-{/* <Form handleSubmit={addPerson} fields={[
+      {/* <Form handleSubmit={addPerson} fields={[
         { title: 'namefld', value: newName, handleValueChange: {handleNameChange} },
         { title: 'numberfld', value: newNumber, handleValueChange: {handleNumberChange} }
       ]} /> */}
@@ -59,7 +59,7 @@ const App = () => {
       </form>
       <h2>Numbers</h2>
       <Persons persons={persons} ></Persons>
-      </div>
+    </div>
   )
 }
 
